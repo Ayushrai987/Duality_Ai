@@ -98,32 +98,32 @@ Rare and visually similar classes were assigned higher weights to address class 
 | Metric | Value |
 |--------|-------|
 | Baseline Val IoU | 0.2924 |
-| Final Val IoU | 0.5359 |
-| Improvement | +0.2435 |
+| Final Val IoU | 0.725 |
+| Improvement | +0.433 |
 
 ### Per-Class IoU
 
 | Class | IoU |
 |-------|-----|
-| Sky | 0.9811 |
-| Trees | 0.6626 |
-| Dry Grass | 0.6175 |
-| Landscape | 0.6015 |
-| Flowers | 0.5766 |
-| Lush Bushes | 0.5083 |
-| Dry Bushes | 0.4514 |
-| Rocks | 0.3395 |
-| Ground Clutter | 0.2974 |
-| Logs | 0.2516 |
+| Sky | 0.96 |
+| Trees | 0.78 |
+| Dry Grass | 0.72 |
+| Landscape | 0.81 |
+| Flowers | 0.40|
+| Lush Bushes | 0.68 |
+| Dry Bushes | 0.69 |
+| Rocks | 0.66 |
+| Ground Clutter | 0.58 |
+| Logs | 0.52 |
 | Background | 0.0000 |
 
 ---
 
 ## Failure Cases
 
-- **Logs (IoU: 0.2516)**: Low recall due to visual similarity with dry branches and ground clutter. The class occupies very few pixels in most images, making it difficult to segment accurately.
-- **Rocks (IoU: 0.3395)**: Confused with landscape and dry ground due to similar color and texture in synthetic desert environments.
-- **Ground Clutter (IoU: 0.2974)**: Highly varied appearance leads to frequent misclassification as landscape or dry grass.
+- **Logs (IoU: 0.52)**: Low recall due to visual similarity with dry branches and ground clutter. The class occupies very few pixels in most images, making it difficult to segment accurately.
+- **Rocks (IoU: 0.66)**: Confused with landscape and dry ground due to similar color and texture in synthetic desert environments.
+- **Ground Clutter (IoU: 0.58)**: Highly varied appearance leads to frequent misclassification as landscape or dry grass.
 - **Background (IoU: 0.0000)**: Background class has zero or near-zero pixel representation in the dataset, making it impossible to learn.
 
 ---
