@@ -207,3 +207,6 @@ python visualize_all.py
 ## Team
 
 Duality AI Hackathon — Offroad Segmentation Track
+Harshit Mendiratta - AI Engineer
+Ayush Rai- AI Engineer
+Rakshit Dahiya- Documentation , Designing and Pitching
