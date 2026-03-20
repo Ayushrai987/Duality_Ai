@@ -1,0 +1,8 @@
+Requirements:
+torch 
+torchvision
+numpy
+opencv-python
+Pillow
+tqdm
+matplotlib
