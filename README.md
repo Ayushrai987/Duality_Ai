@@ -10,9 +10,9 @@ This project implements a semantic segmentation model for off-road desert enviro
 
 The model uses a two-component architecture:
 
-- **Backbone**: DINOv2 ViT-Small (`dinov2_vits14`) pretrained by Meta AI via `facebookresearch/dinov2`
+- **Backbone**: DINOv2 ViT-B/14 (`dinov2_vitb14`) pretrained by Meta AI via `frozen`
 - **Segmentation Head**: Custom ConvNeXt-style decoder (`ConvNeXtHead`)
-- **Input Resolution**: 518 x 518
+- **Input Resolution**: 476*266
 - **Output Classes**: 11
 
 ### ConvNeXtHead Design
@@ -156,18 +156,18 @@ pip install torch torchvision albumentations segmentation-models-pytorch timm pi
 
 ```
 project/
-├── train_deeplabv3.py       # Training script
-├── visualize_all.py         # Visualization script
+├── train_segmentation.py        # Baseline training script
+├── train_upgraded.py            # Final upgraded training script
+├── test_segmentation.py         # Testing/inference script
+├── visualize.py                 # Visualization script
+├── Code-duality.ipynb           # Full experiment notebook
+├── config.py                    # Training configuration
+├── segmentation_head.pth        # Baseline model weights
+├── segmentation_head_upgraded.pth  # Final model weights
 ├── README.md
-├── deeplabv3_results/
-│   ├── deeplabv3_best.pth   # Best model weights
-│   └── results.txt          # Training results
-└── visualizations/
-    ├── 1_training_curves.png
-    ├── 2_per_class_iou.png
-    ├── 3_original_vs_predicted.png
-    ├── 4_predictions_grid.png
-    └── 5_confusion_matrix.png
+├── 111.png                      # Sample prediction output
+├── Ai-predicted image.jpeg
+└── ai-predicted-2.jpeg
 ```
 
 ### Training
